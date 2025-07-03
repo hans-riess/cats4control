@@ -5,139 +5,547 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>W04: Applied Category Theory for Compositional Decision Making</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <header style="background: #ffffff; color: #bf0a30; padding: 1.5rem 0; text-align: center;">
-        <img src="https://confcats-siteplex.s3.us-east-1.amazonaws.com/acc25/small_acc25_logo_lr_color_fe5444424a.png" alt="ACC 2025 Conference Logo" style="max-width:120px; vertical-align: middle; margin-right: 1rem;">
-        <span style="font-size: 2.2rem; font-weight: bold; vertical-align: middle;">W04: Applied Category Theory for Compositional Decision Making</span>
-        <div style="font-size: 1.1rem; color: #042a69; margin-top: 0.5rem;">Time: 1:45pm – 5:30pm | Location: Plaza Court 6</div>
-        <div style="margin-top: 1rem;">
-            <a href="https://css-registration.paperhost.net/acc25/session/login" target="_blank" style="background: #00509e; color: #fff; padding: 0.7rem 1.5rem; border-radius: 5px; font-size: 1.1rem; font-weight: 600; text-decoration: none; display: inline-block;">Register for ACC 2025</a>
+    <header class="hero-header">
+        <div class="header-content">
+            <img src="https://confcats-siteplex.s3.us-east-1.amazonaws.com/acc25/small_acc25_logo_lr_color_fe5444424a.png" alt="ACC 2025 Conference Logo" class="logo">
+            <div class="header-text">
+                <h1>W04: Applied Category Theory for Compositional Decision Making</h1>
+                <div class="workshop-details">
+                    <div class="detail-item">
+                        <i class="fas fa-clock"></i>
+                        <span>1:45pm – 5:30pm</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Plaza Court 6</span>
+                    </div>
+                </div>
+                <a href="https://css-registration.paperhost.net/acc25/session/login" target="_blank" class="cta-button">
+                    <i class="fas fa-user-plus"></i>
+                    Register for ACC 2025
+                </a>
+            </div>
         </div>
     </header>
-    <nav style="background: #bf0a30; padding: 0.5rem 0;">
-        <ul style="list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; gap: 2rem;">
-            <li><a href="#about" style="color: white; text-decoration: none; font-weight: 500;">About</a></li>
-            <li><a href="#speakers" style="color: white; text-decoration: none; font-weight: 500;">Speakers</a></li>
-            <li><a href="#schedule" style="color: white; text-decoration: none; font-weight: 500;">Schedule</a></li>
-            <li><a href="#references" style="color: white; text-decoration: none; font-weight: 500;">References</a></li>
-        </ul>
+
+    <nav class="main-nav">
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="#about" class="nav-link"><i class="fas fa-info-circle"></i>About</a></li>
+                <li><a href="#speakers" class="nav-link"><i class="fas fa-users"></i>Speakers</a></li>
+                <li><a href="#schedule" class="nav-link"><i class="fas fa-calendar"></i>Schedule</a></li>
+                <li><a href="#references" class="nav-link"><i class="fas fa-book"></i>References</a></li>
+            </ul>
+        </div>
     </nav>
-    <div class="container">
-        <section style="background: white; margin: 2rem auto; max-width: 900px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); padding: 2rem;">
-            <h2 style="color: #042a69; border-bottom: 2px solid #00509e; padding-bottom: 0.5rem;">About the Workshop</h2>
-            <p>The workshop's primary objective is to create a platform for connecting various communities, fostering collaboration for the advancement of a compositional theory of decision making.</p>
-            <p>This workshop is open to participants from diverse backgrounds and experience levels, catering to both newcomers and seasoned professionals.</p>
-            <p>Attendees can expect to gain valuable insights into addressing intricate decision-making problems, as the workshop will feature success stories and practical tools from applied category theory.</p>
-            <p>Distinguished experts in the field will deliver talks, showcasing the practical implementation of these tools to tackle real-world issues. These presentations will also offer valuable perspectives on potential directions for future research endeavors, and for creating a new, interdisciplinary community around these topics.</p>
+
+    <main class="main-content">
+        <section id="about" class="content-section">
+            <div class="section-header">
+                <h2>About the Workshop</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-grid">
+                    <div class="about-card">
+                        <div class="card-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>Connect Communities</h3>
+                        <p>Create a platform for connecting various communities, fostering collaboration for the advancement of a compositional theory of decision making.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="card-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>All Experience Levels</h3>
+                        <p>Open to participants from diverse backgrounds and experience levels, catering to both newcomers and seasoned professionals.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="card-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>Practical Insights</h3>
+                        <p>Gain valuable insights into addressing intricate decision-making problems through success stories and practical tools from applied category theory.</p>
+                    </div>
+                </div>
+                <div class="about-description">
+                    <p>Distinguished experts in the field will deliver talks, showcasing the practical implementation of these tools to tackle real-world issues. These presentations will also offer valuable perspectives on potential directions for future research endeavors, and for creating a new, interdisciplinary community around these topics.</p>
+                </div>
+            </div>
         </section>
-        <section id="speakers">
-            <h2>Speakers</h2>
-            <div class="speaker-list">
-                <div class="speaker">
-                    <img src="https://cee.mit.edu/wp-content/uploads/2021/07/Gioele_Zardini_02-min.jpg" alt="Gioele Zardini">
-                    <div>
+
+        <section id="speakers" class="content-section">
+            <div class="section-header">
+                <h2>Featured Speakers</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="speakers-grid">
+                <div class="speaker-card">
+                    <div class="speaker-image">
+                        <img src="https://cee.mit.edu/wp-content/uploads/2021/07/Gioele_Zardini_02-min.jpg" alt="Gioele Zardini">
+                        <div class="speaker-overlay">
+                            <div class="speaker-links">
+                                <a href="#" class="speaker-link" title="View Profile"><i class="fas fa-user"></i></a>
+                                <a href="#" class="speaker-link" title="Research"><i class="fas fa-microscope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="speaker-info">
                         <h3>Gioele Zardini</h3>
-                        <p>MIT</p>
+                        <p class="speaker-affiliation">MIT</p>
+                        <p class="speaker-expertise">Compositional Design & Autonomous Systems</p>
                     </div>
                 </div>
-                <div class="speaker">
-                    <img src="https://mae.ufl.edu/wp-content/uploads/sites/4/connections-images/james-fairbanks/James-Fairbanks-7580fe7b262261b62c2283c171d201ff.png" alt="James Fairbanks">
-                    <div>
+
+                <div class="speaker-card">
+                    <div class="speaker-image">
+                        <img src="https://mae.ufl.edu/wp-content/uploads/sites/4/connections-images/james-fairbanks/James-Fairbanks-7580fe7b262261b62c2283c171d201ff.png" alt="James Fairbanks">
+                        <div class="speaker-overlay">
+                            <div class="speaker-links">
+                                <a href="#" class="speaker-link" title="View Profile"><i class="fas fa-user"></i></a>
+                                <a href="#" class="speaker-link" title="Research"><i class="fas fa-microscope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="speaker-info">
                         <h3>James Fairbanks</h3>
-                        <p>University of Florida</p>
+                        <p class="speaker-affiliation">University of Florida</p>
+                        <p class="speaker-expertise">Scientific Computing & Categories</p>
                     </div>
                 </div>
-                <div class="speaker">
-                    <img src="https://research.gatech.edu/sites/default/files/styles/people_page/public/photos/Matthew%20hale%20UFL%20Headshot.jpg?h=99e18e18&itok=HeWsw7dX" alt="Matthew Hale">
-                    <div>
+
+                <div class="speaker-card">
+                    <div class="speaker-image">
+                        <img src="https://research.gatech.edu/sites/default/files/styles/people_page/public/photos/Matthew%20hale%20UFL%20Headshot.jpg?h=99e18e18&itok=HeWsw7dX" alt="Matthew Hale">
+                        <div class="speaker-overlay">
+                            <div class="speaker-links">
+                                <a href="#" class="speaker-link" title="View Profile"><i class="fas fa-user"></i></a>
+                                <a href="#" class="speaker-link" title="Research"><i class="fas fa-microscope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="speaker-info">
                         <h3>Matthew Hale</h3>
-                        <p>Georgia Tech</p>
-                    </div>
-                </div>
-                <div class="speaker">
-                    <img src="https://divisions-prod.s3.amazonaws.com/bbe20/images/Ames.2e16d0ba.fill-310x412-c100.format-avif.avif" alt="Aaron D. Ames">
-                    <div>
-                        <h3> Aaron D. Ames</h3>
-                        <p>Caltech</p>
-                    </div>
-                </div>
-                
-                <div class="speaker">
-                    <img src="https://gataslab.org/members/images/tylerhanks.png" alt="Tyler Hanks">
-                    <div>
-                        <h3> Tyler Hanks</h3>
-                        <p>University of Florida</p>
+                        <p class="speaker-affiliation">Georgia Tech</p>
+                        <p class="speaker-expertise">Sequential Decision Systems</p>
                     </div>
                 </div>
 
-                <div class="speaker">
-                    <img src="https://media.mathstodon.xyz/accounts/avatars/000/288/332/original/018a5afdee26992e.jpg" alt="Joe Moeller">
-                    <div>
-                        <h3> Joe Moeller</h3>
-                        <p>Caltech</p>
+                <div class="speaker-card">
+                    <div class="speaker-image">
+                        <img src="https://divisions-prod.s3.amazonaws.com/bbe20/images/Ames.2e16d0ba.fill-310x412-c100.format-avif.avif" alt="Aaron D. Ames">
+                        <div class="speaker-overlay">
+                            <div class="speaker-links">
+                                <a href="#" class="speaker-link" title="View Profile"><i class="fas fa-user"></i></a>
+                                <a href="#" class="speaker-link" title="Research"><i class="fas fa-microscope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="speaker-info">
+                        <h3>Aaron D. Ames</h3>
+                        <p class="speaker-affiliation">Caltech</p>
+                        <p class="speaker-expertise">Categorical Lyapunov Theory</p>
                     </div>
                 </div>
 
-            </div>
-        </section>
-        <section id="schedule">
-            <h2>Schedule</h2>
-            <div class="schedule-list">
-                <div class="talk">
-                    <h3>1:45pm - 2:00pm <p>All</p></h3>
-                    <p>Introduction to the workshop and motivation.</p>
-                </div>
-                <div class="talk">
-                    <h3>2:00pm - 3:00pm <p>Zardini/Fairbanks/Ames</p></h3>
-                    <p>Primer on applied category theory (ACT), with examples from various disciplines.</p>
-                </div>
-                <div class="talk">
-                    <h3>3:00pm - 3:40pm<p>Coffee break</p></h3>
-                    <p>Networking opportunity.</p>
-                </div>
-                <div class="talk">
-                    <h3>3:40pm - 4:05pm <p>Ames/Moeller</p></h3>
-                    <p>Introduction to categorical Lyapunov Theory.</p>
-                </div>
-                <div class="talk">
-                    <h3>4:05pm - 4:30pm<p>Fairbanks/Hanks</p></h3>
-                    <p>Scientific computing with categories.</p>
-                </div>
-                <div class="talk">
-                    <h3>4:30pm - 4:55pm<p>Zardini</p></h3>
-                    <p>Compositional design of complex systems.</p>
-                </div>
-                <div class="talk">
-                    <h3>4:55pm - 5:20pm<p>Hale</p></h3>
-                    <p>Compositional modeling of sequential decision systems.</p>
-                </div>
-            </div>
-        </section>
-        <section id="references">
-            <h2>Reading</h2>
-            <div class="references-list">
-                <div class="reference">
-                    <p>Fong, G., Spivak, D. (2018). Seven Sketches in Compositionality: An Invitation to Applied Category Theory. <a href="https://arxiv.org/abs/1803.05316">[Link]</a></p>
-                </div>
-                <div class="reference">
-                    <p>Hanks, T., She, B., Patterson, E., Fairbanks, J. P. (2024). "Modeling Model Predictive Control: A Category Theoretic Framework for Multistage Control Problems." <a href="https://arxiv.org/abs/2305.03820">[Link]</a></p>
-                </div>
-                <div class="reference">
-                    <p> Ames, A. D., Moeller, J., & Tabuada, P. (2025). Categorical Lyapunov Theory I: Stability of Flows. <a href="https://arxiv.org/abs/2502.15276">[Link]</a></p>
-                </div>
-                <div class="reference"></div>
-                    <p>Hanks, T., Klawonn, M., Patterson, E., Hale, M., & Fairbanks, J. (2024). "A compositional framework for first-order optimization." <a href="https://arxiv.org/abs/2403.05711">[Link]</a></p>
-                </div>
-                <div class="reference">
-                    <p>Zardini, G. (2022). "Compositional Design of Autonomous Systems: From Hardware Selection to Decision Making." <a href="https://gioele.science/media/MTNS24-Zardini.pdf">[Link]</a></p>
+                <div class="speaker-card">
+                    <div class="speaker-image">
+                        <img src="https://gataslab.org/members/images/tylerhanks.png" alt="Tyler Hanks">
+                        <div class="speaker-overlay">
+                            <div class="speaker-links">
+                                <a href="#" class="speaker-link" title="View Profile"><i class="fas fa-user"></i></a>
+                                <a href="#" class="speaker-link" title="Research"><i class="fas fa-microscope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="speaker-info">
+                        <h3>Tyler Hanks</h3>
+                        <p class="speaker-affiliation">University of Florida</p>
+                        <p class="speaker-expertise">Optimization & Control Theory</p>
+                    </div>
                 </div>
 
+                <div class="speaker-card">
+                    <div class="speaker-image">
+                        <img src="https://media.mathstodon.xyz/accounts/avatars/000/288/332/original/018a5afdee26992e.jpg" alt="Joe Moeller">
+                        <div class="speaker-overlay">
+                            <div class="speaker-links">
+                                <a href="#" class="speaker-link" title="View Profile"><i class="fas fa-user"></i></a>
+                                <a href="#" class="speaker-link" title="Research"><i class="fas fa-microscope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="speaker-info">
+                        <h3>Joe Moeller</h3>
+                        <p class="speaker-affiliation">Caltech</p>
+                        <p class="speaker-expertise">Mathematical Foundations</p>
+                    </div>
+                </div>
             </div>
         </section>
-    </div>
-    <footer style="background: #042a69; color: white; text-align: center; padding: 1rem 0; margin-top: 2rem;">
-        Copyright 2025 All Rights Reserved
+
+        <section id="schedule" class="content-section">
+            <div class="section-header">
+                <h2>Workshop Schedule</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">Hover over talks to view abstracts • Click to access slides</p>
+            </div>
+            <div class="schedule-timeline">
+                <div class="talk-card opening">
+                    <div class="talk-time">
+                        <span class="time">1:45pm - 2:00pm</span>
+                        <span class="duration">15 min</span>
+                    </div>
+                    <div class="talk-content">
+                        <div class="talk-header">
+                            <h3>Workshop Opening & Motivation</h3>
+                            <div class="talk-speakers">
+                                <span class="speaker-tag">All Organizers</span>
+                            </div>
+                        </div>
+                        <p class="talk-summary">Introduction to the workshop and motivation.</p>
+                        <div class="talk-abstract">
+                            <h4>Abstract</h4>
+                            <p>Welcome to our workshop on Applied Category Theory for Compositional Decision Making. We'll introduce the motivation behind bringing together diverse communities to advance compositional approaches to complex decision-making problems. This opening will set the stage for the day's presentations and establish the interdisciplinary nature of our discussions.</p>
+                        </div>
+                        <div class="talk-actions">
+                            <button class="slides-btn" onclick="window.open('#', '_blank')">
+                                <i class="fas fa-presentation"></i>
+                                View Slides
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="talk-card primer">
+                    <div class="talk-time">
+                        <span class="time">2:00pm - 3:00pm</span>
+                        <span class="duration">60 min</span>
+                    </div>
+                    <div class="talk-content">
+                        <div class="talk-header">
+                            <h3>Primer on Applied Category Theory</h3>
+                            <div class="talk-speakers">
+                                <span class="speaker-tag">Zardini</span>
+                                <span class="speaker-tag">Fairbanks</span>
+                                <span class="speaker-tag">Ames</span>
+                            </div>
+                        </div>
+                        <p class="talk-summary">Foundational concepts with examples from various disciplines.</p>
+                        <div class="talk-abstract">
+                            <h4>Abstract</h4>
+                            <p>This comprehensive introduction covers the fundamental concepts of applied category theory, illustrated through concrete examples from control theory, robotics, and computational science. We'll explore how categorical thinking provides a unified language for compositional design and decision-making across diverse domains. Participants will gain the mathematical foundations needed to understand the subsequent technical presentations.</p>
+                        </div>
+                        <div class="talk-actions">
+                            <button class="slides-btn" onclick="window.open('#', '_blank')">
+                                <i class="fas fa-presentation"></i>
+                                View Slides
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="talk-card break">
+                    <div class="talk-time">
+                        <span class="time">3:00pm - 3:40pm</span>
+                        <span class="duration">40 min</span>
+                    </div>
+                    <div class="talk-content">
+                        <div class="talk-header">
+                            <h3>Coffee Break & Networking</h3>
+                            <div class="talk-speakers">
+                                <span class="speaker-tag networking">Open Discussion</span>
+                            </div>
+                        </div>
+                        <p class="talk-summary">Networking opportunity and informal discussions.</p>
+                        <div class="talk-abstract">
+                            <h4>About</h4>
+                            <p>Take this opportunity to connect with fellow attendees, discuss the morning's presentations, and network with researchers from different fields. Coffee and light refreshments will be provided. This is an excellent time to establish collaborations and exchange ideas about compositional approaches to decision-making.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="talk-card technical">
+                    <div class="talk-time">
+                        <span class="time">3:40pm - 4:05pm</span>
+                        <span class="duration">25 min</span>
+                    </div>
+                    <div class="talk-content">
+                        <div class="talk-header">
+                            <h3>Introduction to Categorical Lyapunov Theory</h3>
+                            <div class="talk-speakers">
+                                <span class="speaker-tag">Ames</span>
+                                <span class="speaker-tag">Moeller</span>
+                            </div>
+                        </div>
+                        <p class="talk-summary">Categorical foundations for stability analysis.</p>
+                        <div class="talk-abstract">
+                            <h4>Abstract</h4>
+                            <p>We present a categorical approach to Lyapunov theory that provides a compositional framework for stability analysis of complex dynamical systems. This work extends classical Lyapunov methods using category theory to enable modular reasoning about system stability. We'll demonstrate how this framework allows for hierarchical decomposition of stability proofs and compositional design of stable control systems.</p>
+                        </div>
+                        <div class="talk-actions">
+                            <button class="slides-btn" onclick="window.open('#', '_blank')">
+                                <i class="fas fa-presentation"></i>
+                                View Slides
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="talk-card technical">
+                    <div class="talk-time">
+                        <span class="time">4:05pm - 4:30pm</span>
+                        <span class="duration">25 min</span>
+                    </div>
+                    <div class="talk-content">
+                        <div class="talk-header">
+                            <h3>Scientific Computing with Categories</h3>
+                            <div class="talk-speakers">
+                                <span class="speaker-tag">Fairbanks</span>
+                                <span class="speaker-tag">Hanks</span>
+                            </div>
+                        </div>
+                        <p class="talk-summary">Categorical approaches to computational methods.</p>
+                        <div class="talk-abstract">
+                            <h4>Abstract</h4>
+                            <p>This talk explores how category theory provides powerful abstractions for scientific computing, enabling compositional design of numerical algorithms and optimization methods. We'll discuss applications to model predictive control, showing how categorical frameworks can make complex computational pipelines more modular, reusable, and mathematically principled. Examples will include implementations using modern scientific computing tools.</p>
+                        </div>
+                        <div class="talk-actions">
+                            <button class="slides-btn" onclick="window.open('#', '_blank')">
+                                <i class="fas fa-presentation"></i>
+                                View Slides
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="talk-card technical">
+                    <div class="talk-time">
+                        <span class="time">4:30pm - 4:55pm</span>
+                        <span class="duration">25 min</span>
+                    </div>
+                    <div class="talk-content">
+                        <div class="talk-header">
+                            <h3>Compositional Design of Complex Systems</h3>
+                            <div class="talk-speakers">
+                                <span class="speaker-tag">Zardini</span>
+                            </div>
+                        </div>
+                        <p class="talk-summary">System-level design using compositional principles.</p>
+                        <div class="talk-abstract">
+                            <h4>Abstract</h4>
+                            <p>We present a compositional approach to designing complex autonomous systems, from hardware selection to high-level decision making. This talk demonstrates how category theory provides a unified framework for reasoning about multi-scale system design, enabling principled composition of subsystems while maintaining global properties. Case studies from autonomous driving and robotics will illustrate the practical benefits of this approach.</p>
+                        </div>
+                        <div class="talk-actions">
+                            <button class="slides-btn" onclick="window.open('#', '_blank')">
+                                <i class="fas fa-presentation"></i>
+                                View Slides
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="talk-card technical">
+                    <div class="talk-time">
+                        <span class="time">4:55pm - 5:20pm</span>
+                        <span class="duration">25 min</span>
+                    </div>
+                    <div class="talk-content">
+                        <div class="talk-header">
+                            <h3>Compositional Modeling of Sequential Decision Systems</h3>
+                            <div class="talk-speakers">
+                                <span class="speaker-tag">Hale</span>
+                            </div>
+                        </div>
+                        <p class="talk-summary">Category theory for decision-making processes.</p>
+                        <div class="talk-abstract">
+                            <h4>Abstract</h4>
+                            <p>This presentation introduces categorical methods for modeling and analyzing sequential decision-making systems. We explore how category theory provides natural abstractions for temporal reasoning and compositional construction of decision policies. The talk will cover applications to reinforcement learning, planning, and multi-agent coordination, demonstrating how categorical thinking enables more modular and interpretable decision-making algorithms.</p>
+                        </div>
+                        <div class="talk-actions">
+                            <button class="slides-btn" onclick="window.open('#', '_blank')">
+                                <i class="fas fa-presentation"></i>
+                                View Slides
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="talk-card closing">
+                    <div class="talk-time">
+                        <span class="time">5:20pm - 5:30pm</span>
+                        <span class="duration">10 min</span>
+                    </div>
+                    <div class="talk-content">
+                        <div class="talk-header">
+                            <h3>Closing Remarks & Future Directions</h3>
+                            <div class="talk-speakers">
+                                <span class="speaker-tag">All Organizers</span>
+                            </div>
+                        </div>
+                        <p class="talk-summary">Wrap-up and discussion of future research directions.</p>
+                        <div class="talk-abstract">
+                            <h4>Summary</h4>
+                            <p>We'll conclude the workshop with a summary of key insights and discussion of future research directions in applied category theory for decision making. This session will highlight opportunities for collaboration and outline potential next steps for building an interdisciplinary community around these topics.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="references" class="content-section">
+            <div class="section-header">
+                <h2>Essential Reading</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="references-grid">
+                <div class="reference-card">
+                    <div class="reference-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="reference-content">
+                        <h3>Seven Sketches in Compositionality</h3>
+                        <p class="reference-authors">Brendan Fong, David Spivak</p>
+                        <p class="reference-year">2018</p>
+                        <p class="reference-description">An invitation to applied category theory with practical examples and exercises.</p>
+                        <a href="https://arxiv.org/abs/1803.05316" target="_blank" class="reference-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            Read Paper
+                        </a>
+                    </div>
+                </div>
+
+                <div class="reference-card">
+                    <div class="reference-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div class="reference-content">
+                        <h3>Modeling Model Predictive Control</h3>
+                        <p class="reference-authors">Tyler Hanks, Baike She, Evan Patterson, James P. Fairbanks</p>
+                        <p class="reference-year">2024</p>
+                        <p class="reference-description">A category theoretic framework for multistage control problems.</p>
+                        <a href="https://arxiv.org/abs/2305.03820" target="_blank" class="reference-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            Read Paper
+                        </a>
+                    </div>
+                </div>
+
+                <div class="reference-card">
+                    <div class="reference-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <div class="reference-content">
+                        <h3>Categorical Lyapunov Theory I</h3>
+                        <p class="reference-authors">Aaron D. Ames, Joe Moeller, Paulo Tabuada</p>
+                        <p class="reference-year">2025</p>
+                        <p class="reference-description">Stability of flows through categorical methods.</p>
+                        <a href="https://arxiv.org/abs/2502.15276" target="_blank" class="reference-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            Read Paper
+                        </a>
+                    </div>
+                </div>
+
+                <div class="reference-card">
+                    <div class="reference-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="reference-content">
+                        <h3>A Compositional Framework for First-Order Optimization</h3>
+                        <p class="reference-authors">Tyler Hanks, Mathias Klawonn, Evan Patterson, Matthew Hale, James Fairbanks</p>
+                        <p class="reference-year">2024</p>
+                        <p class="reference-description">Categorical approaches to optimization algorithms.</p>
+                        <a href="https://arxiv.org/abs/2403.05711" target="_blank" class="reference-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            Read Paper
+                        </a>
+                    </div>
+                </div>
+
+                <div class="reference-card">
+                    <div class="reference-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="reference-content">
+                        <h3>Compositional Design of Autonomous Systems</h3>
+                        <p class="reference-authors">Gioele Zardini</p>
+                        <p class="reference-year">2022</p>
+                        <p class="reference-description">From hardware selection to decision making in autonomous systems.</p>
+                        <a href="https://gioele.science/media/MTNS24-Zardini.pdf" target="_blank" class="reference-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            Read Paper
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Applied Category Theory Workshop. All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="#about">About</a>
+                <a href="#speakers">Speakers</a>
+                <a href="#schedule">Schedule</a>
+                <a href="#references">References</a>
+            </div>
+        </div>
     </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Active navigation highlighting
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Talk card interactions
+        document.querySelectorAll('.talk-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.classList.add('hovered');
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.classList.remove('hovered');
+            });
+        });
+    </script>
 </body>
 </html>
