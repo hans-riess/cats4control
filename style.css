@@ -175,6 +175,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 100;
+    height: auto;
 }
 
 .nav-container {
@@ -220,6 +221,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: var(--spacing-2xl) var(--spacing-xl);
+    scroll-padding-top: 120px; /* Account for sticky navigation */
 }
 
 .content-section {
@@ -229,6 +231,7 @@ body {
     box-shadow: var(--shadow-lg);
     padding: var(--spacing-3xl);
     transition: transform var(--transition-normal);
+    scroll-margin-top: 120px; /* Account for sticky navigation */
 }
 
 .content-section:hover {
@@ -763,11 +766,13 @@ body {
 @media (max-width: 768px) {
     .main-content {
         padding: var(--spacing-xl) var(--spacing-md);
+        scroll-padding-top: 140px; /* More padding for mobile */
     }
     
     .content-section {
         padding: var(--spacing-xl);
         margin: var(--spacing-xl) 0;
+        scroll-margin-top: 140px; /* More margin for mobile */
     }
     
     .header-content {
@@ -840,6 +845,14 @@ body {
     .talk-header {
         flex-direction: column;
         gap: var(--spacing-md);
+    }
+    
+    .main-content {
+        scroll-padding-top: 200px; /* Even more padding for very small screens */
+    }
+    
+    .content-section {
+        scroll-margin-top: 200px; /* Even more margin for very small screens */
     }
 }
 
