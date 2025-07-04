@@ -106,14 +106,20 @@ body {
     z-index: 1;
 }
 
-.logo {
-    max-width: 140px;
-    height: auto;
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+}
+
+.header-logo {
+    height: 56px;
+    width: auto;
     filter: brightness(1.1);
     transition: transform var(--transition-normal);
 }
 
-.logo:hover {
+.header-logo:hover {
     transform: scale(1.05);
 }
 
@@ -318,7 +324,7 @@ body {
     font-size: var(--font-size-lg);
     line-height: 1.8;
     color: var(--gray-700);
-    text-align: center;
+    text-align: left;
     max-width: 800px;
     margin: 0 auto;
 }
