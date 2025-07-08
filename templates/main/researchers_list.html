@@ -1,0 +1,43 @@
+{% extends 'main/base.html' %}
+
+{% block page_title %}Researchers{% endblock %}
+
+{% block content %}
+<div class="section">
+    <h2 class="section-title">Research Community</h2>
+    <div class="section-subtitle">
+        Meet the researchers advancing category theory applications in control systems
+    </div>
+    
+    {% if researchers %}
+        <div class="grid grid-3">
+            {% for researcher in researchers %}
+                <div class="card">
+                    <div class="card-body">
+                        {% if researcher.photo %}
+                            <div style="text-align: center; margin-bottom: 1rem;">
+                                <img src="{{ researcher.photo.url }}" alt="{{ researcher.name }}" 
+                                     style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover;">
+                            </div>
+                        {% endif %}
+                        <h3 class="card-title" style="text-align: center;">{{ researcher.name }}</h3>
+                        <p class="card-text" style="text-align: center;">
+                            <strong>{{ researcher.institution }}</strong><br>
+                            {% if researcher.title %}{{ researcher.title }}{% endif %}
+                        </p>
+                        <p class="card-text">{{ researcher.bio|truncatewords:20 }}</p>
+                        <a href="{% url 'main:researcher_detail' researcher.id %}" class="btn">View Profile</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title">No researchers yet</h3>
+                <p class="card-text">The research community is growing! Check back soon for researcher profiles.</p>
+            </div>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}
