@@ -1,7 +1,6 @@
 from django.contrib import admin
 from .models import (
-    Researcher, Reference, Project, Event, Post, 
-    Talk
+    Researcher, Reference, Project, Event, Talk
 )
 
 @admin.register(Researcher)
@@ -34,18 +33,9 @@ class EventAdmin(admin.ModelAdmin):
     filter_horizontal = ['organizers']
     ordering = ['-start_date']
 
-@admin.register(Post)
-class PostAdmin(admin.ModelAdmin):
-    list_display = ['title', 'author', 'is_published', 'published_at', 'created_at']
-    list_filter = ['is_published', 'published_at', 'author']
-    search_fields = ['title', 'content', 'tags']
-    filter_horizontal = ['related_projects']
-    prepopulated_fields = {'slug': ('title',)}
-    ordering = ['-published_at']
-
 @admin.register(Talk)
 class TalkAdmin(admin.ModelAdmin):
-    list_display = ['title', 'speaker', 'event', 'start_time', 'end_time']
-    list_filter = ['event', 'start_time', 'speaker']
-    search_fields = ['title', 'abstract', 'speaker__name']
+    list_display = ['speaker', 'event', 'start_time', 'end_time', 'talk_type']
+    list_filter = ['event', 'start_time', 'speaker', 'talk_type']
+    search_fields = ['abstract', 'speaker__name']
     ordering = ['start_time']

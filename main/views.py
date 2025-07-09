@@ -3,15 +3,12 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.utils import timezone
 from django.db import models
-from .models import Event, Project, Researcher, Post, Reference
+from .models import Event, Project, Researcher, Reference
 
 def home(request):
     """Home page view"""
     # Get featured events
     featured_events = Event.objects.filter(is_featured=True).order_by('start_date')[:3]
-    
-    # Get recent posts
-    recent_posts = Post.objects.filter(is_published=True).order_by('-published_at')[:3]
     
     # Get active projects
     active_projects = Project.objects.filter(status='active', is_public=True)[:5]
@@ -21,7 +18,6 @@ def home(request):
     
     context = {
         'featured_events': featured_events,
-        'recent_posts': recent_posts,
         'active_projects': active_projects,
         'upcoming_events': upcoming_events,
     }
@@ -37,7 +33,17 @@ def event_detail(request, event_id):
     """Event detail page"""
     event = get_object_or_404(Event, id=event_id)
     talks = event.talks.all().order_by('start_time')
-    return render(request, 'main/event_detail.html', {'event': event, 'talks': talks})
+    
+    # Collect all unique references from all talks
+    event_references = Reference.objects.filter(
+        talks__event=event
+    ).distinct().order_by('-year', 'title')
+    
+    return render(request, 'main/event_detail.html', {
+        'event': event, 
+        'talks': talks,
+        'event_references': event_references
+    })
 
 def projects_list(request):
     """List all public projects"""
@@ -57,26 +63,14 @@ def researchers_list(request):
 def researcher_detail(request, researcher_id):
     """Researcher profile page"""
     researcher = get_object_or_404(Researcher, id=researcher_id, is_active=True)
-    posts = Post.objects.filter(author=researcher, is_published=True).order_by('-published_at')
     projects = Project.objects.filter(
-        models.Q(lead_researcher=researcher) | models.Q(collaborators=researcher),
+        collaborators=researcher,
         is_public=True
     ).distinct()
     return render(request, 'main/researcher_detail.html', {
         'researcher': researcher,
-        'posts': posts,
         'projects': projects
     })
-
-def posts_list(request):
-    """List all published posts"""
-    posts = Post.objects.filter(is_published=True).order_by('-published_at')
-    return render(request, 'main/posts_list.html', {'posts': posts})
-
-def post_detail(request, slug):
-    """Post detail page"""
-    post = get_object_or_404(Post, slug=slug, is_published=True)
-    return render(request, 'main/post_detail.html', {'post': post})
 
 def references_list(request):
     """List all references"""

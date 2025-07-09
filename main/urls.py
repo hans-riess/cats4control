@@ -11,8 +11,6 @@ urlpatterns = [
     path('projects/<int:project_id>/', views.project_detail, name='project_detail'),
     path('researchers/', views.researchers_list, name='researchers_list'),
     path('researchers/<int:researcher_id>/', views.researcher_detail, name='researcher_detail'),
-    path('posts/', views.posts_list, name='posts_list'),
-    path('posts/<slug:slug>/', views.post_detail, name='post_detail'),
     path('references/', views.references_list, name='references_list'),
     path('acc2025/', views.acc2025_view, name='acc2025'),
 ]
