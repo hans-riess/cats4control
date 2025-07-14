@@ -4,7 +4,6 @@ from django.utils import timezone
 
 class Researcher(models.Model):
     """Researcher profiles in the community"""
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=200)
     email = models.EmailField(unique=True)
     institution = models.CharField(max_length=200)
